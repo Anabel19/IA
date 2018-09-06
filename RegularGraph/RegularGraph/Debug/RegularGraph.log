@@ -1,0 +1,16 @@
+﻿  main.cpp
+c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(127): error C2244: 'CGraph<N,E>::InsNode': no se puede hacer coincidir la definición de función con una declaración existente
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(127): note: vea la declaración de 'CGraph<N,E>::InsNode'
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(127): note: definición
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(127): note: 'void CGraph<N,E>::InsNode(void)'
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(127): note: declaraciones existentes
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(127): note: 'bool CGraph<N,E>::InsNode(N)'
+c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(136): error C2244: 'CGraph<N,E>::InsEdge': no se puede hacer coincidir la definición de función con una declaración existente
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(136): note: vea la declaración de 'CGraph<N,E>::InsEdge'
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(136): note: definición
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(136): note: 'bool CGraph<N,E>::InsEdge(void)'
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(136): note: declaraciones existentes
+  c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(136): note: 'bool CGraph<N,E>::InsEdge(CNode<CGraph<N,E>> *&,CNode<CGraph<N,E>> *&,E,bool)'
+c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(146): error C2063: 'CGraph<N,E>::Edge': no es una función
+c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(146): error C2226: error de sintaxis: tipo 'CGraph<N,E>::Edge' inesperado
+c:\users\am\desktop\openglroot\regulargraph\regulargraph\grapho.h(146): error C2447: '{': falta el encabezado de función (¿lista formal de estilo anterior?)
