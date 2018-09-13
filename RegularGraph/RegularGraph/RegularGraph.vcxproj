@@ -76,10 +76,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\AM\Desktop\OpenGLRoot\Glew and Glut\freeglut\include;C:\Users\AM\Desktop\OpenGLRoot\Resources\glew\include;C:\Users\AM\Desktop\OpenGLRoot\Resources\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\AM\Documents\GitHub\IA\OpenGLRoot\Glew and Glut\freeglut\include;C:\Users\AM\Documents\GitHub\IA\OpenGLRoot\Resources\glew\include;C:\Users\AM\Documents\GitHub\IA\OpenGLRoot\Resources\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\AM\Desktop\OpenGLRoot\Glew and Glut\freeglut\lib;C:\Users\AM\Desktop\OpenGLRoot\Resources\glfw\lib-vc2015;C:\Users\AM\Desktop\OpenGLRoot\Resources\glew\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\AM\Documents\GitHub\IA\OpenGLRoot\Glew and Glut\freeglut\lib;C:\Users\AM\Documents\GitHub\IA\OpenGLRoot\Resources\glfw\lib-vc2015;C:\Users\AM\Documents\GitHub\IA\OpenGLRoot\Resources\glew\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32s.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
