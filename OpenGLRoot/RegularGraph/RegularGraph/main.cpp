@@ -1,8 +1,9 @@
+//#include <iostream>
 #include <vector>
 #include <GL/glut.h>
 #include <math.h>
 #include "grapho.h"
-#include "searches.h"
+//#include "searches.h"
 
 using namespace std;
 
@@ -14,7 +15,7 @@ using namespace std;
 void ini() {
 	glMatrixMode(GL_PROJECTION);
 	gluOrtho2D(-20, 20, -20, 20);
-	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glClearColor(0.0, 1.0, 0.0, 0.0);
 }
 
 void DrawGraph() {
@@ -39,7 +40,7 @@ void DrawGraph() {
 	glEnd();
 	glFlush();
 }
-
+/*/
 GLvoid window_key(unsigned char key, int x, int y)
 {
 	switch (key) {
@@ -60,25 +61,26 @@ GLvoid window_key(unsigned char key, int x, int y)
 		break;
 	}
 }
-
+*/
 int main(int argc, char** argv)
 {
 	int c, r, d;
 	r = 1000; c = 1000; d = 10;
 	Cgrafo <float, float> grap(r, c, d);
-	grap.createVertex();
-	grap.createEdges();
-	grap.collectToDraw();
+	//grap.createVertex();
+	//grap.createEdges();
+	//grap.collectToDraw();
 
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(c,r);
 	glutInitWindowPosition(50, 50);
 	glutCreateWindow("Hello!");
 	ini();
-	
-	glutDisplayFunc(DrawGraph);
-	glutDisplayFunc(&window_key);
+	//cout << "hiiiii"<<endl;
+	//glutDisplayFunc(DrawGraph);
+	//cout << "hiiiii" << endl;
+	//glutDisplayFunc(&window_key);
 	glutMainLoop();
 	return 0;
 }

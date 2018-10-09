@@ -91,20 +91,32 @@ void Cgrafo<H,W>::createVertex(){
 		} 	
 	} 
 }
+
 template<class H, class W>
 void Cgrafo<H,W>::createEdges(){
 	gedge *newEdge;
-	for(unsigned int i=0;i<row-1;i++){
-		for(unsigned int j=0;j<col-1;j++){
-			newEdge = new gedge(malla[i][j],malla[i][j+1]);
+	int rw = row - 1;
+	int cl = col - 1;
+	for (unsigned int i = 0; i<rw; i++) {
+		for (unsigned int j = 0; j<cl+1; j++) {
+			newEdge = new gedge(malla[i][j], malla[i + 1][j]);
 			malla[i][j]->EdgeNode.push_back(newEdge);
-			newEdge = new gedge(malla[i][j],malla[i+1][j+1]);
-			malla[i][j]->EdgeNode.push_back(newEdge);
-			newEdge = new gedge(malla[i][j],malla[i+1][j]);
-			malla[i][j]->EdgeNode.push_back(newEdge);
+			if (j<cl) {
+				newEdge = new gedge(malla[i][j], malla[i + 1][j + 1]);
+				malla[i][j]->EdgeNode.push_back(newEdge);
+				newEdge = new gedge(malla[i + 1][j], malla[i][j + 1]);
+				malla[i + 1][j]->EdgeNode.push_back(newEdge);
+				newEdge = new gedge(malla[i][j], malla[i][j + 1]);
+				malla[i][j]->EdgeNode.push_back(newEdge);
+			}
 		}
 	}
+	for (unsigned int j = 0; j<cl; j++) {
+		newEdge = new gedge(malla[rw][j], malla[rw][j + 1]);
+		malla[rw][j]->EdgeNode.push_back(newEdge);
+	}
 }
+
 template<class H, class W>
 void Cgrafo<H, W>::collectToDraw() {
 	for (int i = 0; i<row; i++) {
@@ -112,8 +124,8 @@ void Cgrafo<H, W>::collectToDraw() {
 			Dpoints.push_back(make_pair(malla[i][j]->px, malla[i][j]->py));
 		}
 	}
-	for (unsigned int i = 0; i<row - 1; i++) {
-		for (unsigned int j = 0; j<col - 1; j++) {
+	for (unsigned int i = 0; i<row-1; i++) {
+		for (unsigned int j = 0; j<col-1; j++) {
 			//cout<<malla[i][j]->x<<","<<malla[i][j]->y<<" ";
 			for (typename std::list<gedge *>::iterator it = malla[i][j]->EdgeNode.begin(); it != malla[i][j]->EdgeNode.end(); it++) {
 				Dedges.push_back(make_pair(make_pair((*it)->enode[0]->px, (*it)->enode[0]->py), make_pair((*it)->enode[1]->px, (*it)->enode[1]->py)));
@@ -130,8 +142,8 @@ void Cgrafo<H,W>::print(){
 		cout<<endl;
 	}
 	cout<<"edjesss  "<<endl;
-	for(unsigned int i=0; i<row-1; i++){
-		for(unsigned int j=0;j<col-1;j++){
+	for(unsigned int i=0; i<row; i++){
+		for(unsigned int j=0; j<col; j++){
 			//cout<<malla[i][j]->x<<","<<malla[i][j]->y<<" ";
 			for(typename std::list<gedge *>::iterator it = malla[i][j]->EdgeNode.begin(); it!=malla[i][j]->EdgeNode.end(); it++){
 				cout<<(*it)->enode[0]->px<<","<<(*it)->enode[0]->py<<";"<<(*it)->enode[1]->px<<","<<(*it)->enode[1]->py<<" ";	

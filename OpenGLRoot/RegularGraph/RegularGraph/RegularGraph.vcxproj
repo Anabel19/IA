@@ -124,7 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="grapho.h" />
-    <ClInclude Include="mallaGraph.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

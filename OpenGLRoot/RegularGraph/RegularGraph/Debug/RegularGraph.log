@@ -1,23 +1,6 @@
 ﻿  main.cpp
 c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(74): warning C4018: '<': no coinciden signed/unsigned
   c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(73): note: durante la compilación de la función miembro de plantilla clase de 'Cgrafo<float,float>::~Cgrafo(void)'
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(41): note: vea la referencia a la creación de instancias de plantilla de función 'Cgrafo<float,float>::~Cgrafo(void)' que se está compilando
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(41): note: vea la referencia a la creación de instancias de plantilla clase de 'Cgrafo<float,float>' que se está compilando
-c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(89): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(85): note: durante la compilación de la función miembro de plantilla clase de 'void Cgrafo<float,float>::createVertex(void)'
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(42): note: vea la referencia a la creación de instancias de plantilla de función 'void Cgrafo<float,float>::createVertex(void)' que se está compilando
-c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(97): warning C4018: '<': no coinciden signed/unsigned
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(95): note: durante la compilación de la función miembro de plantilla clase de 'void Cgrafo<float,float>::createEdges(void)'
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(43): note: vea la referencia a la creación de instancias de plantilla de función 'void Cgrafo<float,float>::createEdges(void)' que se está compilando
-c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(98): warning C4018: '<': no coinciden signed/unsigned
-c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(115): warning C4018: '<': no coinciden signed/unsigned
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(109): note: durante la compilación de la función miembro de plantilla clase de 'void Cgrafo<float,float>::collectToDraw(void)'
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(44): note: vea la referencia a la creación de instancias de plantilla de función 'void Cgrafo<float,float>::collectToDraw(void)' que se está compilando
-c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(116): warning C4018: '<': no coinciden signed/unsigned
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\utility(233): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(112): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<float,float>::pair<int,int,0>(std::pair<int,int> &&) noexcept' que se está compilando
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(112): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<float,float>::pair<int,int,0>(std::pair<int,int> &&) noexcept' que se está compilando
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\grapho.h(109): note: durante la compilación de la función miembro de plantilla clase de 'void Cgrafo<float,float>::collectToDraw(void)'
-  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(44): note: vea la referencia a la creación de instancias de plantilla de función 'void Cgrafo<float,float>::collectToDraw(void)' que se está compilando
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\utility(234): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(69): note: vea la referencia a la creación de instancias de plantilla de función 'Cgrafo<float,float>::~Cgrafo(void)' que se está compilando
+  c:\users\am\documents\github\ia\openglroot\regulargraph\regulargraph\main.cpp(69): note: vea la referencia a la creación de instancias de plantilla clase de 'Cgrafo<float,float>' que se está compilando
   RegularGraph.vcxproj -> C:\Users\AM\Documents\GitHub\IA\OpenGLRoot\RegularGraph\Debug\RegularGraph.exe
