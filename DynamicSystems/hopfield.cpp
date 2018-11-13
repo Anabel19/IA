@@ -7,7 +7,7 @@ int m=static_cast<int>(0.140f*n); // number of patterns (rows)
 
 using namespace std;
 
-void pattern(int* &pattern){
+void patterns(int* &pattern){
 	for(unsigned r=0;r<m;r++)  
     {
         for(unsigned c=0;c<n;c++)
