@@ -1,21 +1,15 @@
 from __future__ import print_function
 
-# Toy dataset: each row is an example; 
-# the last column is the label and the first two columns are features.
-# Feel free to play with it by adding more features & examples.
-# Interesting note: I've written this so the 2nd and 5th examples
-# have the same features, but different labels - so we can see how the
-# tree handles this case.
 training_data = [
-    ['Green', 3, 'Apple'],
-    ['Yellow', 3, 'Apple'],
-    ['Red', 1, 'Grape'],
-    ['Red', 1, 'Grape'],
-    ['Yellow', 3, 'Lemon'],
+    ['Green', 458835, 'Lamborghini'],
+    ['Yellow', 458835, 'Lamborghini'],
+    ['Red', 382210, 'Jet'],
+    ['Red', 382210, 'Jet'],
+    ['Yellow', 458835, 'Toyota'],
 ]
 
 # column labels-> print the tree.
-header = ["color", "diameter", "label"]
+header = ["color", "price", "label"]
 
 #send (training_data,0)
 #find the unique values for a column in a dataset
@@ -40,9 +34,7 @@ def is_numeric(value):
 
 #used to partition a dataset  
 #This class just records a 'column number' (e.g., 0 for Color) and a
-#'column value' (e.g., Green). The 'match' method is used to compare
-#the feature value in an example to the feature value stored in the
-#question. See the demo below	
+#'column value' (e.g., label). The 'match' method is used to compare
 class Question:
     def __init__(self, column, value):
         self.column = column
@@ -124,9 +116,7 @@ class Decision_Node:
         self.true_branch = true_branch
         self.false_branch = false_branch
 
-#Rules of recursion: 1)Believe that it works. 2)Start by checking
-#for the base case (no further information gain). 3) Prepare for
-#giant stack traces.		
+#Rules of recursion		
 def build_tree(rows):
     gain, question = find_best_split(rows)
     if gain == 0:
@@ -160,7 +150,6 @@ def classify(row, node):
     if isinstance(node, Leaf):
         return node.predictions
 
-    # Decide whether to follow the true-branch or the false-branch.
     # Compare the feature / value stored in the node,
     # to the example we're considering.
     if node.question.match(row):
@@ -168,7 +157,7 @@ def classify(row, node):
     else:
         return classify(row, node.false_branch)
 	
-#print the predictions at a leaf	
+#	
 def print_leaf(counts):
     total = sum(counts.values()) * 1.0
     probs = {}
@@ -178,13 +167,12 @@ def print_leaf(counts):
 	
 # Evaluate
 testing_data = [
-    ['Green', 3, 'Apple'],
-    ['Yellow', 4, 'Apple'],
-    ['Red', 2, 'Grape'],
-    ['Red', 1, 'Grape'],
-    ['Yellow', 3, 'Lemon'],
+    ['Green', 458835, 'Lamborghini'],
+    ['Yellow', 458835, 'Lamborghini'],
+    ['Red', 382210, 'Jet'],
+    ['Red', 382210, 'Jet'],
+    ['Yellow', 458835, 'Toyota'],
 ]
-
 for row in testing_data:
     print ("Actual: %s. Predicted: %s" %
            (row[-1], print_leaf(classify(row, my_tree))))
