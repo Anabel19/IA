@@ -28,7 +28,6 @@ def class_counts(rows):
         counts[label] += 1
     return counts
 
-#send (number)	- test if a value is numeric
 def is_numeric(value):
     return isinstance(value, int) or isinstance(value, float)
 
@@ -66,7 +65,7 @@ def partition(rows, question):
             false_rows.append(row)
     return true_rows, false_rows
 
-#Calculate the uncertainy of our training data
+#Calculate -> uncertainy of our training data
 def gini(rows):
     counts = class_counts(rows)
     impurity = 1
@@ -75,7 +74,7 @@ def gini(rows):
         impurity -= prob_of_lbl**2
     return impurity
 
-# How much information do we gain
+#information gain
 def info_gain(left, right, current_uncertainty):
     p = float(len(left)) / (len(left) + len(right))
     return current_uncertainty - p * gini(left) - (1 - p) * gini(right)
@@ -115,8 +114,7 @@ class Decision_Node:
         self.question = question
         self.true_branch = true_branch
         self.false_branch = false_branch
-
-#Rules of recursion		
+	
 def build_tree(rows):
     gain, question = find_best_split(rows)
     if gain == 0:
@@ -144,20 +142,17 @@ def print_tree(node, spacing=""):
 my_tree = build_tree(training_data)
 print_tree(my_tree)
 
-#see 'rules of recursion'
 def classify(row, node):
     # Base case: we've reached a leaf
     if isinstance(node, Leaf):
         return node.predictions
 
     # Compare the feature / value stored in the node,
-    # to the example we're considering.
     if node.question.match(row):
         return classify(row, node.true_branch)
     else:
         return classify(row, node.false_branch)
-	
-#	
+		
 def print_leaf(counts):
     total = sum(counts.values()) * 1.0
     probs = {}
